@@ -1,0 +1,1 @@
+docker run --name my-redis -p 6377:6379 -v /Users/baekido/docker/redis/data:/data -d redis

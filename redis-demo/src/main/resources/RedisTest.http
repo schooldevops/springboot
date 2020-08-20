@@ -1,0 +1,33 @@
+### String save
+POST http://localhost:8080/api/string/name?value=kido
+Content-Type: application/x-www-form-urlencoded
+
+### String get
+GET http://localhost:8080/api/string/name
+
+### Set save
+POST http://localhost:8080/api/set/name?value=kido
+Content-Type: application/x-www-form-urlencoded
+
+### Set save
+POST http://localhost:8080/api/set/name?value=kido2
+Content-Type: application/x-www-form-urlencoded
+
+### get from Set
+GET http://localhost:8080/api/set/name
+
+
+### hash save
+POST http://localhost:8080/api/hash/name2?value=kido2
+Content-Type: application/x-www-form-urlencoded
+
+### get from Set
+GET http://localhost:8080/api/hash
+
+
+### hash save
+POST http://localhost:8080/api/zset/name?value=kido3&score=3
+Content-Type: application/x-www-form-urlencoded
+
+### get from Set
+GET http://localhost:8080/api/zset/name
