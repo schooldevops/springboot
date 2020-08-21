@@ -53,4 +53,14 @@ public class RedisController {
     public Set<String> getFromZSet(@PathVariable("key") String key) {
         return redisService.getZSet(key);
     }
+
+    @PostMapping("/list/{key}")
+    public String saveList(@PathVariable("key") String key, @RequestParam String value) {
+        return redisService.saveList(key, value);
+    }
+
+    @GetMapping("/list/{key}")
+    public List<String> getList(@PathVariable("key") String key) {
+        return redisService.getList(key);
+    }
 }
