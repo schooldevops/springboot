@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+<settings xmlns="http://maven.apache.org/SETTINGS/1.0.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0 https://maven.apache.org/xsd/settings-1.0.0.xsd">
+  <mirrors>
+    <mirror>
+      <id>public</id>
+      <mirrorOf>central</mirrorOf>
+      <url>http://comnexus.company.com/repository/my-central/</url>
+    </mirror>
+    <mirror>
+      <id>common-lib-snapshot</id>
+      <mirrorOf>common-lib-snapshot</mirrorOf>
+      <url>http://comnexus.company.com/repository/common-lib-snapshot/</url>
+    </mirror>
+    <mirror>
+      <id>common-lib-release</id>
+      <mirrorOf>common-lib-release</mirrorOf>
+      <url>http://comnexus.company.com/repository/common-lib-release/</url>
+    </mirror>
+  </mirrors>
+
+  <profiles>
+    <profile>
+      <id>nexus</id>
+      <repositories>
+        <repository>
+          <id>public</id>
+          <url>http://comnexus.company.com/repository/my-central/</url>
+        </repository>
+           <id>common-lib-snapshot</id>
+           <url>http://comnexus.company.com/repository/common-lib-snapshot/</url>
+        <repository>
+           <id>common-lib-release</id>
+           <url>http://comnexus.company.com/repository/common-lib-release/</url>
+        </repository>
+      </repositories>
+    </profile>
+  </profiles>
+
+  <activeProfiles>
+    <activeProfile>nexus</activeProfile>
+  </activeProfiles>
+
+  <servers>
+    <server>
+      <id>common-lib-snapshot</id>
+      <username>client-user</username>
+      <password>client-user-1234</password>
+    </server>
+    <server>
+      <id>common-lib-release</id>
+      <username>client-user</username>
+      <password>client-user-1234</password>
+    </server>
+  </servers>  
+</settings>
